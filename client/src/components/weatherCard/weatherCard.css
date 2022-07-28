@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-
-.container {
-  max-width: 80vw;
-  height: 80vh;
+.location {
+  width: 50%;
   margin: auto;
+  margin-top: 1rem;
+  text-align: center;
+}
+.location p {
+  font-size: 3rem;
+
+}
+.container {
+  max-width: 60vw;
+  height: 70vh;
+  margin: auto;
+  margin-top: 0;
   /* padding: 0 1rem; */
   position: relative;
   top: 10%;
@@ -17,14 +27,20 @@
   .top {
   width: 100%;
   margin: .1rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
 }
 
   .description {
-  position: relative;
-  right: -90%;
-  transform-origin: 0 0;
-  transform: rotate(269deg);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
 }
+.description h1 {
+  font-weight: 500;
+ }
 
   .bottom {
   display: flex;
@@ -41,3 +57,8 @@
   font-weight: 700;
 }
 
+/* .temp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+} */
