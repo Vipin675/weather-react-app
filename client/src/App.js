@@ -6,6 +6,7 @@ import "./App.css";
 const App = () => {
   const [data, setData] = useState({});
   const [location, setLocation] = useState("ludhiana");
+  const apiKey = process.env.REACT_APP_WEATHER_API;
 
   const searchedText = (e) => {
     setLocation(e.target.value);
@@ -15,7 +16,7 @@ const App = () => {
     async function fetchWeatherData() {
       await axios
         .get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=a21e6be663f565c3ad3f3454f1267f87`
+          `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`
         )
         .then((response) => {
           setData(response.data);
@@ -23,7 +24,6 @@ const App = () => {
     }
     fetchWeatherData();
   }, [location]);
-  console.log(data);
 
   return (
     <div className="App">
