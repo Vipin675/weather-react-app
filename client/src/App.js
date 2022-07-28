@@ -2,11 +2,11 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import WeatherCard from "./components/weatherCard/WeatherCard.jsx";
 import "./App.css";
+const apiKey = process.env.REACT_APP_WEATHER_API;
 
 const App = () => {
   const [data, setData] = useState({});
   const [location, setLocation] = useState("ludhiana");
-  const apiKey = process.env.REACT_APP_WEATHER_API;
 
   const searchedText = (e) => {
     setLocation(e.target.value);
