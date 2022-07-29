@@ -2,9 +2,6 @@ import React from "react";
 import "./weatherCard.css";
 
 const WeatherCard = (props) => {
-  // var iconCode = props.data.weather[0].icon;
-  // var iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
-
   return (
     <>
       <div className="location">
@@ -14,7 +11,7 @@ const WeatherCard = (props) => {
         <div className="top">
           <div className="temp">
             {props.data.main ? (
-              <h1>{props.data.main.temp.toFixed()}°F</h1>
+              <h2>{props.data.main.temp.toFixed()}°F</h2>
             ) : null}
           </div>
           <div className="description">
@@ -24,7 +21,7 @@ const WeatherCard = (props) => {
                 alt="Icon depicting current weather."
               />
             ) : null}
-            {props.data.weather ? <h1>{props.data.weather[0].main}</h1> : null}
+            {props.data.weather ? <h2>{props.data.weather[0].main}</h2> : null}
           </div>
         </div>
 
