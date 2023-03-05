@@ -1,6 +1,8 @@
 {
-  "short_name": "React App",
   "name": "Create React App Sample",
+  "short_name": "Weather App",
+  "start_url": "index.html",
+  "scope": "./",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +20,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "display": "standalone"
 }
